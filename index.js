@@ -16,7 +16,7 @@
 
 const aws = require("./aws");
 const database = require("./database");
-const dottransposer = require("./dot-transposer");
+const dottransposer = require("./dottransposer");
 const js = require("./js");
 const mqtt = require("./mqtt");
 
