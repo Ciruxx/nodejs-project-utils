@@ -1,6 +1,6 @@
 {
   "name": "@ciruxx/nodejs-project-utils",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A personal and public repository of my trusted libraries",
   "author": "Ciro Santillo <ciro1693@gmail.com>",
   "main": "index.js",
@@ -33,6 +33,7 @@
     "@hapi/boom": "^9.1.2",
     "@types/node": "^16.11.1",
     "aws-sdk": "^2.1008.0",
+    "bson": "^4.5.3",
     "flat": "^5.0.2",
     "lodash": "^4.17.21",
     "lodash-clean": "^2.2.2",
