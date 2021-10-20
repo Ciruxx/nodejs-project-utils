@@ -14,14 +14,18 @@
  * limitations under the License.
  */
 
-const azure = require("./azure");
-const constants = require("./constants");
+const aws = require("./aws");
+const cdk = require("./cdk");
 const database = require("./database");
+const dottransposer = require("./dot-transposer");
+const js = require("./js");
 const mqtt = require("./mqtt");
 
 module.exports = {
-    azure,
-    constants,
+    aws,
+    cdk,
     database,
+    dottransposer,
+    js,
     mqtt
 }
