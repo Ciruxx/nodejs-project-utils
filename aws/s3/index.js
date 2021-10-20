@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-const {s3} = require("./sdk");
+const {s3} = require("../sdk");
 
 async function getObject(params) {
     return await s3.getObject(params).promise();

@@ -15,7 +15,7 @@
  */
 
 const _ = require('lodash');
-const {dynamoDb} = require("./sdk");
+const {dynamoDb} = require("../sdk");
 
 async function scan(params) {
     let scanResults = [];

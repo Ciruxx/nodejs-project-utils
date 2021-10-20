@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-const {lambda} = require("./sdk");
+const {lambda} = require("../sdk");
 
 async function invoke(params) {
     return await lambda.invoke(params).promise()

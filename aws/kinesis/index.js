@@ -15,7 +15,7 @@
  */
 
 const _ = require('lodash');
-const {kinesis} = require("./sdk");
+const {kinesis} = require("../sdk");
 
 async function putRecords(kinesStreamName, partitionKey, array, chunkSize = 250) {
     const records = array.map((element) => {

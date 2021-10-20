@@ -15,7 +15,6 @@
  */
 
 const aws = require("./aws");
-const cdk = require("./cdk");
 const database = require("./database");
 const dottransposer = require("./dot-transposer");
 const js = require("./js");
@@ -23,7 +22,6 @@ const mqtt = require("./mqtt");
 
 module.exports = {
     aws,
-    cdk,
     database,
     dottransposer,
     js,
