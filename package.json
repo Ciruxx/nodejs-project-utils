@@ -1,6 +1,6 @@
 {
   "name": "@ciruxx/nodejs-project-utils",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A personal and public repository of my trusted libraries",
   "author": "Ciro Santillo <ciro1693@gmail.com>",
   "main": "index.js",

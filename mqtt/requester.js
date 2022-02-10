@@ -75,7 +75,7 @@ module.exports = {
         await this._mqtt.unsubscribe(topic);
     },
 
-    async request(category, name, action, json, {timeout = 20000, errorTrimLength = 100000}) {
+    async request(category, name, action, json, {timeout = 20000, errorTrimLength = 100000} = {}) {
         return new Promise(async (resolve, reject) => {
             const messageId = Math.floor(Math.random() * 100000).toString();
             const requestTopic = `backend/${category}/${name}/${action}/request/${messageId}`;
