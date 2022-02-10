@@ -24,8 +24,12 @@ function toDot(object) {
     return flatten(object);
 }
 
+function toDotSafe(object) {
+    return flatten(object, {safe: true});
+}
 
 module.exports = {
     toObject,
-    toDot
+    toDot,
+    toDotSafe
 }

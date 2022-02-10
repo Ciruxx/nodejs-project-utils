@@ -75,7 +75,7 @@ module.exports = {
         await this._mqtt.unsubscribe(topic);
     },
 
-    async request(category, name, action, json) {
+    async request(category, name, action, json, {timeout = 20000, errorTrimLength = 100000}) {
         return new Promise(async (resolve, reject) => {
             const messageId = Math.floor(Math.random() * 100000).toString();
             const requestTopic = `backend/${category}/${name}/${action}/request/${messageId}`;
@@ -120,10 +120,12 @@ module.exports = {
                 clearTimeout(responseTimeout);
                 this._events.removeListener(responseTopic, onMessage);
 
-                console.error(`[${new Date().toISOString()}] Microservice unavailable: \nTopic: ${requestTopic} \nMessage: ${JSON.stringify(json)}`);
+                const inputJsonString = JSON.stringify(json);
+                const trimmedString = inputJsonString.length > errorTrimLength ? inputJsonString.substring(0, errorTrimLength - 3) + "..." : inputJsonString
+                console.error(`[${new Date().toISOString()}] Microservice unavailable: \nTopic: ${requestTopic} \nMessage: ${trimmedString}`);
 
                 reject(Boom.gatewayTimeout("Microservice unavailable"));
-            }, 20000);
+            }, timeout);
 
             // console.log("Mandata la richiesta con ID: "+messageId);
 
